@@ -95,21 +95,18 @@
 //         int ans = grid[0][0];
 //         vector<vector<int>> visited(m, vector<int>(n, 0));
 //         priority_queue<Node> que;
-//         // Node* root = new Node(0, 0, grid[0][0]);
 //         que.push(Node(0, 0, grid[0][0]));
 //         visited[0][0] = 1;
 //         while (!que.empty()) {
 //             Node root = que.top();
 //             que.pop();
 //             ans = min(ans, root.score);
-//             cout << "pop: " << ", x: " << root.x << ", y: " << root.y << ", grid[x][y]: " << root.score << endl;
 //             if (root.x == m - 1 && root.y == n - 1) return ans;
 //             for (auto direction : directions) {
 //                 int x = root.x + direction[0];
 //                 int y = root.y + direction[1];
 //                 if (x < 0 || x == m || y < 0 || y == n || visited[x][y] == 1) continue;
 //                 que.push(Node(x, y, grid[x][y]));
-//                 cout << "push: " << ", x: " << x << ", y: " << y << ", grid[x][y]: " << grid[x][y] << endl;
 //                 visited[x][y] = 1;
 //             }
 //         }
@@ -147,21 +144,17 @@
 //         priority_queue<NodePtr, vector<NodePtr>, myComparator> que;
 //         // Node* root = new Node(0, 0, grid[0][0]);
 //         que.push(new Node(0, 0, grid[0][0]));
-//         // que.push(new Node(0, 1, grid[0][1]));
-        
 //         visited[0][0] = 1;
 //         while (!que.empty()) {
 //             NodePtr root = que.top();
 //             que.pop();
 //             ans = min(ans, root->score);
-//             // cout << "pop: " << ", x: " << root->x << ", y: " << root->y << ", grid[x][y]: " << root->score << endl;
 //             if (root->x == m - 1 && root->y == n - 1) return ans;
 //             for (auto direction : directions) {
 //                 int x = root->x + direction[0];
 //                 int y = root->y + direction[1];
 //                 if (x < 0 || x == m || y < 0 || y == n || visited[x][y] == 1) continue;
 //                 que.push(new Node(x, y, grid[x][y]));
-//                 // cout << "push: " << ", x: " << x << ", y: " << y << ", grid[x][y]: " << grid[x][y] << endl;
 //                 visited[x][y] = 1;
 //             }
 //         }
