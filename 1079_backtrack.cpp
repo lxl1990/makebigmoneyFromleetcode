@@ -29,16 +29,11 @@
 //         }
 //         index_map.clear();
 //         int n = c_cnt.size();
-//         // for (int cnt : c_cnt) {
-//         //     cout << cnt << ", "; 
-//         // }
-//         // cout << endl;
 //         vector<int> path;
 //         dfs(c_cnt, path, 0, n);
 //         return ans;
 //     }
 //     void dfs(vector<int>& c_cnt, vector<int>& path, int index, int n) {
-//         // cout<<"index: " << index << ", all: " << all_cnt << endl;
 //         if (index == n) {
 //             int divisor = 1;
 //             int all_cnt = 0;
@@ -47,8 +42,6 @@
 //                 all_cnt += cnt;
 //                 divisor *= permution(cnt);
 //             }
-//             // cout << "all_cnt: " << all_cnt << ", divisor: " << divisor << ", val: " << permution(all_cnt) / divisor;
-//             // cout << endl;
 //             if (all_cnt > 0) ans += permution(all_cnt) / divisor;
 //             return;
 //         }

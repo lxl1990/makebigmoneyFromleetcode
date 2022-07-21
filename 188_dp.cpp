@@ -42,11 +42,11 @@ public:
             for (int i = 1; i < n; ++i) {
                 if (sell - prices[i] >= buy) {
                     buy = sell - prices[i];
-                    buyCount = sellCount;
+                    buyCount = sellCount + 1;
                 }
                 if (buy + prices[i] - c >= sell) {
                     sell = buy + prices[i] - c;
-                    sellCount = buyCount + 1;
+                    sellCount = buyCount;
                 }
             }
 

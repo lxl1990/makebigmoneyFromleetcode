@@ -1,6 +1,5 @@
 class Solution {
 private:
-    unordered_map<int, int> cache_map;
     int ans = 0;
 public:
     int maxUniqueSplit(string s) {
@@ -16,10 +15,6 @@ public:
             ans = max(ans, int(elements.size()));
             return;
         };
-        if (cache_map.find(start) != cache_map.end()) {
-            ans = max(ans, int(elements.size()) + cache_map[start]);
-            return;
-        }
         for (int end = start + 1; end <= n; end++) {
             string substring = s.substr(start, end - start);
             if (find(elements.begin(), elements.end(), substring) != elements.end()) continue;
